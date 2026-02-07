@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <>
-      <div>
+      <footer>
         <div className="flex w-[80%] mx-auto border-t-1 border-black h-fit px-20 py-10 justify-between  font-[sans-serif]">
           <div>
             <h1 className="text-xl font-bold mb-3">SOCIAL MEDIA</h1>
@@ -27,9 +27,9 @@ export default function Footer() {
           </div>
         </div>
         <div className="w-[80%] mx-auto justify-center items-center flex  border-t-1 border-black  py-2  text-sm">
-          <p>&copy; {new Date().getFullYear()} FIU | GRAMMR LAB</p>
+          <p>&copy; {new Date().getFullYear()} FIU GRAMMR Lab. All rights reserved.</p>
         </div>
-      </div>
+      </footer>
     </>
   );
 }
