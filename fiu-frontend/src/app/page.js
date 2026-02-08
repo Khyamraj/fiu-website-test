@@ -2,15 +2,16 @@ import Body from "@/components/body";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Nav from "@/components/nav";
-import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="w-full  h-screen">
+    <div className="flex flex-col min-h-screen w-full">
       <Header />
       <Nav />
-      <Body/>
-      <Footer/>
+      <main className="flex-1 flex flex-col">
+        <Body />
+      </main>
+      <Footer />
     </div>
   );
 }

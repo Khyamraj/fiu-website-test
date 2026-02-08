@@ -4,13 +4,17 @@ import Logo from "./logo";
 export default function Header() {
   return (
     <>
-      <div className=" flex flex-col w-[80%] h-[200px] mx-auto ">
-        <div className="flex mx-auto justify-between h-[80%] px-20 items-center text-center w-full ">
-          <Logo />
-          <Grammr />
+      <div className="flex flex-col w-[95%] sm:w-[90%] md:w-[85%] lg:w-[80%] max-w-screen-xl h-auto mx-auto py-6 md:py-10">
+        <div className="flex flex-col sm:flex-row items-center sm:justify-between w-full gap-4 sm:gap-0 min-h-[120px]">
+          <div className="mb-4 sm:mb-0 flex justify-center sm:justify-start w-full sm:w-auto">
+            <Logo />
+          </div>
+          <div className="flex justify-center sm:justify-end w-full sm:w-auto">
+            <Grammr />
+          </div>
         </div>
-        <div className="text-white flex justify-center items-center h-[20%]">
-          <p className="text-middle text-3xl mb-10 font-bold text-yellow-500 font-[times] ">
+        <div className="flex justify-center items-center mt-3">
+          <p className="text-center text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-500 font-[Times] leading-tight">
             Granular Micro-Mechanics Research Lab
           </p>
         </div>
