@@ -6,7 +6,7 @@ export default function Grammr() {
       
       <Image
         src="/images/Grammr-logo.png"
-        alt="FIU Logo"
+        alt="GRAMMR Logo"
         width={350}
         height={250}
         className="w-full h-auto "
