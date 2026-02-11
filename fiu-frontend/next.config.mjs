@@ -4,7 +4,7 @@ const nextConfig = {
   /* config options here */
   reactCompiler: true,
   images:{
-    domains:["imgs.search.brave.com"],
+    domains:["localhost"],
   },
 };
 
