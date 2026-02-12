@@ -3,9 +3,9 @@ import Image from "next/image";
 export default function Logo() {
   return (
     <div className="w-40 xs:w-52 sm:w-60 md:w-72 lg:w-80 xl:w-[350px] max-w-full h-auto flex items-center">
-      <img
+      <Image
         src="/images/grammr.png"
-        alt="FIU Logo"
+        alt="Grammr Logo"
         width={350}
         height={250}
         className="w-full h-auto "
