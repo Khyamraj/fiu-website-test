@@ -4,25 +4,28 @@ import Image from "next/image";
 
 const alumniMembers = [
   {
-    name: "Ayesha Singh",
+    name: "Student 1",
     role: "MS Graduate, Class of 2023",
     photo: "/images/pp-template.jpg",
     position: "Data Scientist at Amazon",
     linkedIn: "https://www.linkedin.com/in/ayesha-singh-alumni/",
+    testimonial: "My time at the lab provided me with valuable hands-on research experience, challenging me to think creatively and collaborate with brilliant minds. The mentorship and support I received helped shape my path to success."
   },
   {
-    name: "Miguel Rivera",
+    name: "Student 2",
     role: "BS Graduate, Class of 2022",
     photo: "/images/pp-template.jpg",
     position: "Software Engineer at Google",
     linkedIn: "https://www.linkedin.com/in/miguelrivera-alumni/",
+    testimonial: "Being a part of this team set the foundation for my professional growth. I learned not only technical concepts but also the importance of teamwork and perseverance. The skills I developed here have been crucial in my career."
   },
   {
-    name: "Sara Kim",
+    name: "Student 3",
     role: "PhD Graduate, Class of 2021",
     photo: "/images/pp-template.jpg",
     position: "Assistant Professor at University of California",
     linkedIn: "https://www.linkedin.com/in/sarakim-alumni/",
+    testimonial: "The collaborative environment and innovative research in the group gave me the confidence and skills needed to pursue an academic career. I’m grateful for the guidance and lifelong connections I made during my time here."
   },
   // Add more alumni as needed
 ];
@@ -55,6 +58,7 @@ function AlumniCard({ member }) {
           </a>
         )}
       </div>
+     
     </div>
   );
 }
@@ -74,6 +78,34 @@ export default function AlumniPage() {
             {alumniMembers.map((member, idx) => (
               <AlumniCard key={member.name + idx} member={member} />
             ))}
+          </div>
+        </section>
+        <section className="mt-12">
+          <h2 className="text-xl font-semibold text-blue-700 mb-4 text-center">
+            What Our Alumni Say
+          </h2>
+          <div className="grid gap-6 md:grid-cols-2">
+            {alumniMembers
+              .filter((member) => member.testimonial)
+              .map((member, idx) => (
+                <div key={"testimonial-" + member.name + idx} className="bg-white rounded-xl shadow-md p-6 flex flex-col items-start border-l-4 border-blue-200">
+                  <div className="flex items-center mb-3">
+                    <Image
+                      src={member.photo}
+                      alt={member.name}
+                      width={50}
+                      height={50}
+                      className="rounded-full object-cover border-2 border-blue-100"
+                    />
+                    <div className="ml-3">
+                      <div className="font-semibold text-blue-900">{member.name}</div>
+                      <div className="text-xs text-gray-700">{member.position}</div>
+                    </div>
+                  </div>
+                  <div className="text-gray-800 italic">"{member.testimonial}"</div>
+                </div>
+              ))
+            }
           </div>
         </section>
       </div>
