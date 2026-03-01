@@ -23,7 +23,6 @@ export default function Nav() {
         >
           {menuOpen ? <span>&#10005;</span> : <span>&#9776;</span>}
         </button>
-        <span className="text-base font-bold">MENU</span>
       </div>
 
       <ul className="hidden md:flex justify-between items-center text-base font-bold tracking-wide">

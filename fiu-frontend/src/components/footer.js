@@ -10,38 +10,31 @@ export default function Footer() {
             </h1>
             <ul className="space-y-1 text-sm">
               <li>
+              LinkedIn: 
                 <a
-                  href="https://www.facebook.com/"
+                  href="https://www.linkedin.com/in/anil-misra-9120b329b?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="cursor-pointer hover:underline focus:underline outline-none"
                   tabIndex={0}
                 >
-                  Facebook
+                  {" "}Anil Misra, Ph.D., P.E.
+                 
                 </a>
               </li>
               <li>
+              LinkedIn: 
                 <a
-                  href="https://www.instagram.com/"
+                  href="https://www.linkedin.com/in/seung-jae-lee-ph-d?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="cursor-pointer hover:underline focus:underline outline-none"
                   tabIndex={0}
                 >
-                  Instagram
+                 {" "}Seung Jae Lee, Ph.D
                 </a>
               </li>
-              <li>
-                <a
-                  href="https://x.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="cursor-pointer hover:underline focus:underline outline-none"
-                  tabIndex={0}
-                >
-                  Twitter (X)
-                </a>
-              </li>
+              
             </ul>
           </div>
 

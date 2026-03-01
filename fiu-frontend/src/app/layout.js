@@ -1,5 +1,9 @@
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/header"
+import Nav from "@/components/nav";
+import Footer from "@/components/footer";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,7 +19,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata = {
   title: "FIU",
-  description: "Website For FIU",
+  description: "Grammr Lab | FIU",
 };
 
 export default function RootLayout({ children }) {
@@ -27,8 +31,14 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} antialiased min-h-screen bg-[var(--background)] text-[var(--foreground)]`}
       >
-        <div className="w-full min-h-screen flex flex-col">
-          {children}
+        <div className="w-full min-h-screen flex flex-col relative ">
+         
+          <div className="relative z-10 flex flex-col min-h-screen w-full">
+            <Header />
+            <Nav />
+            {children}
+            <Footer />
+          </div>
         </div>
       </body>
     </html>
